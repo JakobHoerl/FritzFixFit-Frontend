@@ -1,0 +1,89 @@
+.nav {
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+}
+.logout {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  padding: 2rem;
+  list-style-type: none;
+  gap: 40px;
+}
+.nav ul li {
+  position: relative;
+  padding: 3px;
+  font-weight: bold;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav ul li a:visited {
+  color: white;
+}
+
+.nav ul li:hover a {
+  text-decoration: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav a:visited {
+  color: white;
+}
+.nav ul a:hover {
+  text-decoration: underline;
+}
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.line {
+  width: 33px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .navLinks ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

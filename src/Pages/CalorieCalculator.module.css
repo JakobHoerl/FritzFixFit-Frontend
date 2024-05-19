@@ -1,0 +1,19 @@
+.calorieCalculator {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4em;
+}
+.calorieCalculator h2 {
+  color: var(--color-light--1);
+  margin-bottom: 4em;
+}
+.calorieCalculator h3 {
+  text-align: center;
+}
+.calorieCalculator a {
+  margin-top: 2em;
+}

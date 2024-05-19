@@ -1,0 +1,147 @@
+@import "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css";
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-brand--1: rgb(250, 104, 14);
+  --color-brand--2: rgb(255, 255, 255);
+
+  --color-dark--0: #242a2e;
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: #d6dee0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+}
+.ctalink {
+  background-color: var(--color-brand--1);
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+.vegan {
+  padding: 0.2em;
+  width: 52px;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.499);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50;
+  left: 0;
+  z-index: 1000;
+}
+.no-scroll {
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: black;
+}
+
+.button-green {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-brand--1);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-green:hover {
+  transform: scale(1.1);
+}
+.button-disabled {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ccc;
+  border: none;
+  color: #666;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-disabled:hover {
+  background-color: #ccc;
+  transform: none;
+}
+.button-black {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--color-dark--2);
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--color-brand--1);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="number"]::placeholder {
+  color: var(--color-dark--2);
+}
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--color-dark--2);
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: white;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E"); /* Add custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--color-brand--1);
+}
+.red {
+  color: red;
+}

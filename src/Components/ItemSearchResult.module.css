@@ -1,0 +1,35 @@
+.items {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-bottom: 3em;
+}
+.items:hover {
+  transform: scale(1.1);
+}
+
+.imgContainer img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.weight,
+.price {
+  color: #666;
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  font-size: 18px;
+}
+.weightPrice {
+  margin-top: 10px;
+}

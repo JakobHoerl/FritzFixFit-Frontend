@@ -1,0 +1,36 @@
+.fullLogo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+}
+.logo {
+  height: 7.5rem;
+  border-radius: 10px;
+}
+.logoText {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin-left: 0.5rem;
+  height: 100%;
+}
+
+.logoText h2 {
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--color-brand--1);
+  text-stroke-width: 2px;
+  text-stroke-color: var(--color-brand--1);
+  transform: rotate(7deg);
+}
+.logoText h2:nth-child(2) {
+  color: white;
+  transform: rotate(7deg);
+}
+
+@media screen and (max-width: 800px) {
+  .logo {
+    height: 6rem;
+  }
+}

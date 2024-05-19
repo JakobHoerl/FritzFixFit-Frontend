@@ -1,0 +1,267 @@
+{
+  "products": [
+    {
+      "name": "Fritz's Whey Protein Chocolate",
+      "weight": "900 g",
+      "price": 32.9,
+      "vegan": false,
+      "img": "/resources/ProteinPowder.png",
+      "category": "Protein-Powder",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Whey Protein Chocolate",
+      "weight": "2000 g",
+      "price": 64.9,
+      "vegan": false,
+      "img": "/resources/ProteinPowder.png",
+      "category": "Protein-Powder",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Whey Protein Chocolate Peanut Butter",
+      "weight": "900 g",
+      "price": 32.9,
+      "vegan": false,
+      "img": "/resources/ProteinPowder.png",
+      "category": "Protein-Powder",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Whey Protein Chocolate Peanut Butter",
+      "weight": "2000 g",
+      "price": 64.9,
+      "vegan": false,
+      "img": "/resources/ProteinPowder.png",
+      "category": "Protein-Powder",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Whey Protein Powder Vanilla",
+      "weight": "900 g",
+      "price": 32.9,
+      "vegan": false,
+      "img": "/resources/ProteinPowder.png",
+      "category": "Protein-Powder",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Whey Protein Powder Vanilla",
+      "weight": "2000 g",
+      "price": 64.9,
+      "vegan": false,
+      "img": "/resources/ProteinPowder.png",
+      "category": "Protein-Powder",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Whey Protein Powder Strawberry",
+      "weight": "900 g",
+      "price": 32.9,
+      "vegan": false,
+      "img": "/resources/ProteinPowder.png",
+      "category": "Protein-Powder",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Whey Protein Powder Strawberry",
+      "weight": "2000 g",
+      "price": 64.9,
+      "vegan": false,
+      "img": "/resources/ProteinPowder.png",
+      "category": "Protein-Powder",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Whey Protein Cookies and Cream",
+      "weight": "900 g",
+      "price": 32.9,
+      "vegan": false,
+      "img": "/resources/ProteinPowder.png",
+      "category": "Protein-Powder",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Whey Protein Cookies and Cream",
+      "weight": "2000 g",
+      "price": 64.9,
+      "vegan": false,
+      "img": "/resources/ProteinPowder.png",
+      "category": "Protein-Powder",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Vegan Protein Mix",
+      "weight": "900 g",
+      "price": 35.9,
+      "vegan": true,
+      "img": "/resources/ProteinPowder.png",
+      "category": "Protein-Powder",
+      "quantity": 1
+    },
+
+    {
+      "name": "Fritz's Milk Chocolate Protein Bar",
+      "weight": "1x60g",
+      "price": 2.5,
+      "vegan": false,
+      "img": "/resources/ProteinBar.png",
+      "category": "Protein-Bar",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Milk Chocolate Protein Bar (10 bars)",
+      "weight": "10x60g",
+      "price": 18.9,
+      "vegan": false,
+      "img": "/resources/ProteinBar.png",
+      "category": "Protein-Bar",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Peanut Butter Protein Bar",
+      "weight": "1x60g",
+      "price": 2.5,
+      "vegan": false,
+      "img": "/resources/ProteinBar.png",
+      "category": "Protein-Bar",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Peanut Butter Protein Bar (10 bars)",
+      "weight": "10x60g",
+      "price": 18.9,
+      "vegan": false,
+      "img": "/resources/ProteinBar.png",
+      "category": "Protein-Bar",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Strawberry Protein Bar",
+      "weight": "1x60g",
+      "price": 2.5,
+      "vegan": false,
+      "img": "/resources/ProteinBar.png",
+      "category": "Protein-Bar",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Strawberry Protein Bar (10 bars)",
+      "weight": "10x60g",
+      "price": 18.9,
+      "vegan": false,
+      "img": "/resources/ProteinBar.png",
+      "category": "Protein-Bar",
+      "quantity": 1
+    },
+
+    {
+      "name": "Fritz's Vegan Chocolate Protein Bar",
+      "weight": "1x60g",
+      "price": 2.9,
+      "vegan": true,
+      "img": "/resources/ProteinBar.png",
+      "category": "Protein-Bar",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Vegan Chocolate Protein Bar Pack (10 bars)",
+      "weight": "10x60g",
+      "price": 22.9,
+      "vegan": true,
+      "img": "/resources/ProteinBar.png",
+      "category": "Protein-Bar",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Lemon Turbo Booster",
+      "weight": "300g",
+      "price": 32.9,
+      "vegan": false,
+      "img": "/resources/Booster.png",
+      "category": "Booster",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Orange Turbo Booster",
+      "weight": "300g",
+      "price": 32.9,
+      "vegan": false,
+      "img": "/resources/Booster.png",
+      "category": "Booster",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Magnesium Glycinate Kapseln",
+      "weight": "150 Kapseln 200mg/Kapsel",
+      "price": 27.5,
+      "vegan": false,
+      "img": "/resources/Supplements.png",
+      "category": "Supplement",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Magnesium Threonate Kapseln",
+      "weight": "150 Kapseln 200mg/Kapsel",
+      "price": 27.5,
+      "vegan": false,
+      "img": "/resources/Supplements.png",
+      "category": "Supplement",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Fischöl",
+      "weight": "500ml",
+      "price": 35.9,
+      "vegan": false,
+      "img": "/resources/Supplements.png",
+      "category": "Supplement",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Glutamin Kapseln",
+      "weight": "150 Kapseln 800mg/Kapsel",
+      "price": 23.7,
+      "vegan": false,
+      "img": "/resources/Supplements.png",
+      "category": "Supplement",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Ashwagandha Kapseln",
+      "weight": "150 Kapseln 2000mg/Kapsel",
+      "price": 32.7,
+      "vegan": false,
+      "img": "/resources/Supplements.png",
+      "category": "Supplement",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's EAA Kapseln",
+      "weight": "150 Kapseln 1000mg/Kapsel",
+      "price": 32.7,
+      "vegan": false,
+      "img": "/resources/Supplements.png",
+      "category": "Supplement",
+      "quantity": 1
+    },
+    {
+      "name": "Fritz's Orange Turbo Booster",
+      "weight": "150 Kapseln 800mg/Kapsel",
+      "price": 27.5,
+      "vegan": false,
+      "img": "/resources/Supplements.png",
+      "category": "Supplement",
+      "quantity": 1
+    },
+    {
+      "name": "Wasserflasche",
+      "weight": "1000ml",
+      "price": 4.9,
+      "vegan": false,
+      "img": "/resources/Bottle.png",
+      "category": "Other",
+      "quantity": 1
+    }
+  ]
+}
