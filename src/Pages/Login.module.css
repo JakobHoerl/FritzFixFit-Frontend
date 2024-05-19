@@ -30,3 +30,11 @@
   margin-right: 30px;
   margin-left: 30px;
 }
+@media screen and (max-width: 805px) {
+  .login form {
+    width: 30em;
+  }
+  .login form input {
+    width: 20em;
+  }
+}
