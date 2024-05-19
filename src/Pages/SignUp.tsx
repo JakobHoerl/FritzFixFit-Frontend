@@ -62,7 +62,7 @@ const SignUp: React.FC<SignUpProps> = ({ setUsername }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/signup",
+        `${process.env.REACT_APP_BACKEND_URL}/signup`,
         formData
       );
       if (response.status === 201) {

@@ -62,7 +62,7 @@ const Login: React.FC<LoginProps> = ({ setUsername }) => {
       console.log("Submitting login data:", values);
       try {
         const response = await axios.post(
-          "http://localhost:3000/login",
+          `${process.env.REACT_APP_BACKEND_URL}/login`,
           values
         );
         console.log("Response from server:", response.data);

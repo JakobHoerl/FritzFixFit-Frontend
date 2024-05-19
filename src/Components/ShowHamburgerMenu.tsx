@@ -32,7 +32,9 @@ const ShowHamburgerMenu: React.FC<ShowHamburgerProps> = ({
 
   const handleLogout = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/logout");
+      const response = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/logout`
+      );
       if (response.status === 200) {
         localStorage.setItem("username", "");
         setUsername("");
