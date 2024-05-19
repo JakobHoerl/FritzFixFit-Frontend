@@ -62,7 +62,7 @@ const SignUp: React.FC<SignUpProps> = ({ setUsername }) => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/signup`,
+        "https://fritzfixfit-backend-production.up.railway.app/signup",
         formData
       );
       if (response.status === 201) {
