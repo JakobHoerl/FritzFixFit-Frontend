@@ -1,18 +1,22 @@
-import { useState, ChangeEvent, FormEvent } from "react";
-import styles from "./Login.module.css";
+import { useState, ChangeEvent, FormEvent, useEffect } from "react";
+import styles from "./Login.module.css"; // Assuming you're reusing the same CSS file
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 interface FormValues {
   email: string;
   password: string;
   name: string;
 }
+
 interface FormErrors {
   email?: string;
   password?: string;
   name?: string;
 }
+
 type SignUpProps = {
   setUsername: React.Dispatch<React.SetStateAction<string>>;
 };
@@ -23,14 +27,21 @@ const SignUp: React.FC<SignUpProps> = ({ setUsername }) => {
     email: "",
     password: "",
   });
-  const [formErrors, setFormErrors] = useState<FormErrors>({
-    name: "",
-    email: "",
-    password: "",
-  });
+  const [formErrors, setFormErrors] = useState<FormErrors>({});
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const warningShown = localStorage.getItem("warningShown");
+    if (!warningShown) {
+      alert(
+        "Bitte geben Sie nicht das Passwort ein, das Sie normalerweise verwenden. Leider habe ich noch nicht herausgefunden, wie man das Passwort vernünftig hasht."
+      );
+      localStorage.setItem("warningShown", "true");
+    }
+  }, []);
 
   const displayEmailError = () => {
     if (errorMessage) return <span className="red">{errorMessage}</span>;
@@ -68,7 +79,6 @@ const SignUp: React.FC<SignUpProps> = ({ setUsername }) => {
       if (response.status === 201) {
         localStorage.setItem("username", response.data.username);
         setUsername(formData.name);
-
         navigate("/");
       }
     } catch (error) {
@@ -84,7 +94,7 @@ const SignUp: React.FC<SignUpProps> = ({ setUsername }) => {
   const validateForm = (values: FormValues) => {
     const errors: FormErrors = {};
     const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
+    const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d\S]{8,}$/;
 
     if (!values.name.trim()) {
       errors.name = "Der Name darf nicht leer sein";
@@ -126,13 +136,22 @@ const SignUp: React.FC<SignUpProps> = ({ setUsername }) => {
             onChange={handleChange}
           />
           {displayEmailError()}
-          <input
-            type="password"
-            placeholder="Passwort"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-          />
+          <div className={styles.passwordWrapper}>
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Passwort"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+            />
+            <button
+              type="button"
+              className={styles.toggleButton}
+              onClick={() => setShowPassword((prev) => !prev)}
+            >
+              <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+            </button>
+          </div>
           {formErrors.password && (
             <span className="red">{formErrors.password}</span>
           )}
@@ -152,4 +171,5 @@ const SignUp: React.FC<SignUpProps> = ({ setUsername }) => {
     </div>
   );
 };
+
 export default SignUp;

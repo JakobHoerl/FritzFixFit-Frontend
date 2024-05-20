@@ -2,6 +2,8 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import styles from "./Login.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 interface FormValues {
   email: string;
@@ -21,7 +23,7 @@ type LoginProps = {
 function Validation(values: FormValues) {
   const errors: FormErrors = {};
   const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
+  const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d\S]{8,}$/;
 
   if (!values.email.trim()) {
     errors.email = "Die E-Mail-Adresse darf nicht leer sein.";
@@ -40,18 +42,13 @@ function Validation(values: FormValues) {
 }
 
 const Login: React.FC<LoginProps> = ({ setUsername }) => {
-  const [values, setValues] = useState<FormValues>({
-    email: "",
-    password: "",
-  });
+  const [values, setValues] = useState<FormValues>({ email: "", password: "" });
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const [errors, setErrors] = useState<FormErrors>({});
 
   const handleInput = (event: ChangeEvent<HTMLInputElement>) => {
-    setValues((prev) => ({
-      ...prev,
-      [event.target.name]: event.target.value,
-    }));
+    setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -98,18 +95,27 @@ const Login: React.FC<LoginProps> = ({ setUsername }) => {
             placeholder="E-mail"
             name="email"
             value={values.email}
-          ></input>
+          />
           {errors.email ||
             (errors.password && (
               <span className="red">Falsche E-mail Adresse oder Passwort</span>
             ))}
-          <input
-            onChange={handleInput}
-            type="password"
-            placeholder="Passwort"
-            name="password"
-            value={values.password}
-          ></input>
+          <div className={styles.passwordWrapper}>
+            <input
+              onChange={handleInput}
+              type={showPassword ? "text" : "password"}
+              placeholder="Passwort"
+              name="password"
+              value={values.password}
+            />
+            <button
+              type="button"
+              className={styles.toggleButton}
+              onClick={() => setShowPassword((prev) => !prev)}
+            >
+              <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+            </button>
+          </div>
           {values.email === "" || values.password === "" ? (
             <button type="submit" className="button-disabled">
               Login

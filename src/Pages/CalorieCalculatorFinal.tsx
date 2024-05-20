@@ -52,7 +52,7 @@ export default function CalorieCalculatorFinal({
     <div className={styles.container}>
       <div className={styles.content}>
         <h2>
-          Sie haben einen täglichen Kalorienverbrauch von ngefähr{" "}
+          Sie haben einen täglichen Kalorienverbrauch von ungefähr{" "}
           <strong className={styles.greenColor}>
             {calculateCalories(
               state.weight,

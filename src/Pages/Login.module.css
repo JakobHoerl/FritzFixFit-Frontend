@@ -30,6 +30,30 @@
   margin-right: 30px;
   margin-left: 30px;
 }
+.passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.passwordWrapper input {
+  flex: 1;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #999;
+  top: 16px;
+}
+
+.toggleButton .faEye,
+.toggleButton .faEyeSlash {
+  font-size: 1rem;
+}
 @media screen and (max-width: 805px) {
   .login form {
     width: 30em;
