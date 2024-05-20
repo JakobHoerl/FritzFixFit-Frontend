@@ -36,10 +36,12 @@ const SignUp: React.FC<SignUpProps> = ({ setUsername }) => {
   useEffect(() => {
     const warningShown = localStorage.getItem("warningShown");
     if (!warningShown) {
-      alert(
-        "Bitte geben Sie nicht das Passwort ein, das Sie normalerweise verwenden. Leider habe ich noch nicht herausgefunden, wie man das Passwort vernünftig hasht."
-      );
-      localStorage.setItem("warningShown", "true");
+      setTimeout(() => {
+        alert(
+          "Bitte geben Sie nicht das Passwort ein, das Sie normalerweise verwenden. Leider habe ich noch nicht herausgefunden, wie man das Passwort vernünftig hasht."
+        );
+        localStorage.setItem("warningShown", "true");
+      }, 1000);
     }
   }, []);
 
