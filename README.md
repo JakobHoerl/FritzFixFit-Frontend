@@ -1,3 +1,3 @@
-Frontend Datein von meinem Supplement Store.
+Frontend-Dateien meines Supplement-Stores.
 
 Technologien: HTML,CSS,JavaScript,React
