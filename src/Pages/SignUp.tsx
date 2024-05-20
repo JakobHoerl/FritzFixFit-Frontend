@@ -1,5 +1,5 @@
 import { useState, ChangeEvent, FormEvent, useEffect } from "react";
-import styles from "./Login.module.css"; // Assuming you're reusing the same CSS file
+import styles from "./Login.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -32,18 +32,6 @@ const SignUp: React.FC<SignUpProps> = ({ setUsername }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const warningShown = localStorage.getItem("warningShown");
-    if (!warningShown) {
-      setTimeout(() => {
-        alert(
-          "Bitte geben Sie nicht das Passwort ein, das Sie normalerweise verwenden. Leider habe ich noch nicht herausgefunden, wie man das Passwort vernünftig hasht."
-        );
-        localStorage.setItem("warningShown", "true");
-      }, 1000);
-    }
-  }, []);
 
   const displayEmailError = () => {
     if (errorMessage) return <span className="red">{errorMessage}</span>;
